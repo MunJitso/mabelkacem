@@ -1,0 +1,395 @@
+@font-face {
+    font-family: Coffee;
+    src: url(font/CoffeeMorning-Bld.woff);
+}
+
+@font-face {
+    font-family: Austral;
+    src: url(font/austral-sans_blur-light-webfont.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    padding: 3rem 7rem;
+}
+
+header {
+    transition: .1s;
+    font-family: Coffee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 5rem;
+    padding: 1rem 2.5rem;
+    position: fixed;
+}
+
+.brand {
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+    transition: .1s;
+}
+
+.brand:hover {
+    color: rgb(51, 64, 141);
+}
+
+.humburger-icon {
+    position: absolute;
+    right: 3.5rem;
+    z-index: 999;
+    width: 32px;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+.line-black {
+    background-color: black;
+}
+
+.icon-top,
+.icon-bottom {
+    transition: .5s;
+}
+
+.rotate-top {
+    transition: .5s;
+    transform: rotate(-45deg) translateY(6px);
+}
+
+.rotate-bottom {
+    transition: .5s;
+    transform: rotate(45deg) translateY(-6px);
+}
+
+nav {
+    opacity: 0;
+    transform: scaleX(0);
+    background-color: white;
+    padding: 0.6rem;
+    padding-right: 3.5rem;
+    border-radius: 50px;
+    transition: .5s;
+    display: flex;
+    box-shadow: 0px 0px 15px 0px #00000085;
+}
+
+.nav-show {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.nav-item {
+    padding: 0 .5rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    transition: .1s;
+}
+
+.nav-item:hover {
+    color: rgb(51, 64, 141);
+}
+
+
+/* Banner */
+
+#banner {
+    font-family: Coffee;
+    background-color: #00071c;
+    min-height: 100vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.sticky .line {
+    background-color: #000;
+}
+
+.sticky .brand {
+    transition: .1s;
+    color: black;
+}
+
+.sticky .brand:hover {
+    color: rgb(51, 64, 141);
+}
+
+.headbanner h4 {
+    font-size: 1.5rem;
+    color: rgb(43, 48, 78);
+    padding: 0.5rem;
+}
+
+.headbanner p {
+    font-size: 2.5rem;
+    padding: 0 1.5rem 1rem;
+}
+
+.btn-banner {
+    margin: 1rem 0;
+}
+
+.btn-about {
+    color: rgb(219, 229, 250);
+    font-size: 1.5rem;
+    margin: 0 .75rem 8px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1000px;
+    border: 3px solid rgb(219, 229, 250);
+    transition: .1s;
+}
+
+.btn-about:hover {
+    transform: translateY(-7px);
+    color: rgb(40, 45, 56);
+    font-weight: bolder;
+    background-color: rgb(219, 229, 250);
+}
+
+
+/* About */
+
+#about {
+    color: rgb(43, 48, 78);
+    font-family: Austral;
+}
+
+.about-title {
+    width: 100%;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-title h1 {
+    color: #00071c;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.my-image {
+    margin: 0 3rem;
+    width: 30%;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.title-container {
+    font-weight: bold;
+    color: rgb(51, 64, 141);
+    font-size: 1.5rem;
+}
+
+.description-myself {
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+.first-paragraph {
+    margin-bottom: 2rem;
+}
+
+
+/* WORK */
+
+#work {
+    font-family: Austral;
+}
+
+#work h1 {
+    font-family: Coffee;
+    font-weight: bold;
+    color: #000d33;
+    font-size: 2.75rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.work-container {
+    padding: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.work-image {
+    margin: 0 3rem;
+    width: 40%;
+}
+
+.work-description p {
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.25rem;
+}
+
+.work-description h2 {
+    color: rgb(51, 64, 141);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+}
+
+.btn-to-center {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-button {
+    text-align: center;
+    font-family: Coffee;
+    color: rgb(95, 37, 187);
+    font-size: 1.5rem;
+    margin: 0 .75rem 0;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1000px;
+    border: 3px solid rgb(95, 37, 187);
+    transition: .1s;
+}
+
+.work-button:hover {
+    transform: translateY(-7px);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    background-color: rgb(95, 37, 187);
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    background-color: #00071c;
+}
+
+.fab {
+    color: rgba(219, 229, 250, 0.623);
+    margin: 0.75rem;
+    font-size: 1.25rem;
+    transition: .1s;
+}
+
+.fab:hover {
+    color: rgb(219, 229, 250)
+}
+
+.copyright {
+    color: rgb(219, 229, 250);
+    font-size: 1.25rem;
+    font-family: Coffee;
+    padding: 2rem;
+}
+
+.copyright a {
+    transition: .1s;
+    color: rgb(219, 229, 250);
+    font-size: 1.25rem;
+}
+
+.copyright a:hover {
+    color: rgb(37, 64, 187);
+}
+
+@media (max-width:993px) {
+    section {
+        padding: 3rem 3rem;
+    }
+    header {
+        transition: .1s;
+        padding: 1rem 3rem;
+    }
+    .sticky {
+        transition: .1s;
+        background-color: #fff;
+        box-shadow: 0px 7px 21px -1px #0000006b;
+    }
+    .humburger-icon {
+        right: 4rem
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-item {
+        display: block;
+        padding: 2rem 0;
+    }
+    .about-description {
+        flex-direction: column;
+    }
+    .my-image {
+        margin: 0 0 1.4rem;
+        width: 100%;
+    }
+    .description-myself {
+        width: 100%;
+        font-size: 1.25rem;
+    }
+    .work-container {
+        padding: 3rem 0;
+        flex-direction: column;
+    }
+    .reverse {
+        flex-direction: column;
+    }
+    .work-image {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+}
+
+@media (max-width:323px) {
+    a {
+        display: block;
+    }
+}
