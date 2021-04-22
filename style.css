@@ -347,7 +347,11 @@ footer {
     .humburger-icon {
         right: 4rem
     }
+    #banner {
+        padding: 3rem 0;
+    }
     nav {
+        padding: 0;
         position: fixed;
         top: 0;
         right: 0;
@@ -391,5 +395,11 @@ footer {
 @media (max-width:323px) {
     a {
         display: block;
+    }
+    header {
+        padding: 1rem 1rem;
+    }
+    .humburger-icon {
+        right: 1rem
     }
 }
