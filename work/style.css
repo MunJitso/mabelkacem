@@ -1,0 +1,263 @@
+@font-face {
+    font-family: Coffee;
+    src: url(../font/CoffeeMorning-Bld.woff);
+}
+
+@font-face {
+    font-family: Austral;
+    src: url(../font/austral-sans_blur-light-webfont.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+section {
+    min-height: 100vh;
+    padding: 0 12.5rem 8rem;
+}
+
+header {
+    transition: .1s;
+    font-family: Coffee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 5rem;
+    padding: 1rem 2.5rem;
+    position: fixed;
+}
+
+.brand {
+    font-size: 2rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    transition: .1s;
+}
+
+.brand:hover {
+    color: rgb(51, 64, 141);
+}
+
+.humburger-icon {
+    position: absolute;
+    right: 3.5rem;
+    z-index: 999;
+    width: 32px;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    border-radius: 40px;
+}
+
+.icon-top,
+.icon-bottom {
+    transition: .5s;
+}
+
+.rotate-top {
+    transition: .5s;
+    transform: rotate(-45deg) translateY(6px);
+}
+
+.rotate-bottom {
+    transition: .5s;
+    transform: rotate(45deg) translateY(-6px);
+}
+
+nav {
+    opacity: 0;
+    background-color: white;
+    padding: 0.6rem;
+    padding-right: 3.5rem;
+    border-radius: 50px;
+    transition: .5s;
+    display: flex;
+    box-shadow: 0px 0px 15px 0px #00000085;
+}
+
+.nav-show {
+    opacity: 1;
+}
+
+.nav-item {
+    padding: 0 .5rem;
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+    transition: .1s;
+}
+
+.nav-item:hover {
+    color: rgb(51, 64, 141);
+}
+
+.sticky .line {
+    background-color: #000;
+}
+
+.sticky .brand {
+    transition: .1s;
+    color: black;
+}
+
+.sticky .brand:hover {
+    color: rgb(51, 64, 141);
+}
+
+
+/* Banner */
+
+#banner {
+    padding: 0;
+    font-family: Coffee;
+    min-height: 40vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.headbanner p {
+    color: rgb(4, 9, 37);
+    font-size: 2.5rem;
+    padding: 0 1.5rem 1rem;
+}
+
+
+/* Cards */
+
+.cards-container {
+    font-family: Austral;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 0 6rem;
+    grid-template-columns: 2fr 2fr;
+}
+
+.card {
+    min-height: 15rem;
+    margin-bottom: 80px;
+}
+
+.down-card {
+    margin: 80px 0 0 0;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    padding: .5rem 0 0;
+    font-size: 1.55rem;
+    color: rgb(51, 64, 141);
+}
+
+.card p {
+    color: gray;
+    font-size: 1.1rem;
+}
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    background-color: #00071c;
+}
+
+.fab {
+    color: rgba(219, 229, 250, 0.623);
+    margin: 0.75rem;
+    font-size: 1.25rem;
+    transition: .1s;
+}
+
+.fab:hover {
+    color: rgb(219, 229, 250)
+}
+
+.copyright {
+    color: rgb(219, 229, 250);
+    font-size: 1.25rem;
+    font-family: Coffee;
+    padding: 2rem;
+}
+
+.copyright a {
+    transition: .1s;
+    color: rgb(219, 229, 250);
+    font-size: 1.25rem;
+}
+
+.copyright a:hover {
+    color: rgb(37, 64, 187);
+}
+
+@media (max-width:993px) {
+    section {
+        padding: 3rem 3rem;
+    }
+    header {
+        transition: .1s;
+        padding: 1rem 3rem;
+    }
+    .sticky {
+        transition: .1s;
+        background-color: #fff;
+        box-shadow: 0px 7px 21px -1px #0000006b;
+    }
+    .humburger-icon {
+        right: 3rem
+    }
+    #banner {
+        padding: 6rem 0 0;
+    }
+    nav {
+        padding: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-item {
+        display: block;
+        padding: 2rem 0;
+    }
+    .cards-container {
+        grid-template-columns: 2fr;
+        grid-gap: 6rem;
+    }
+    .down-card {
+        margin: 0;
+    }
+    .card {
+        margin: 0;
+    }
+}
